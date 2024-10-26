@@ -12,7 +12,8 @@ https://templatemo.com/tm-583-festava-live
 -----------------------------------------*/
 :root {
   --white-color:                  #ffffff;
-  --primary-color:                #F8CB2E;
+  --green-color:                  #1d5b50;
+  --primary-color:                #d5dce7;
   --secondary-color:              #EE5007;
   --section-bg-color:             #f0f8ff;
   --custom-btn-bg-color:          #EE5007;
@@ -285,7 +286,7 @@ strong {
   CUSTOM ICON COLOR               
 -----------------------------------------*/
 .custom-icon {
-  color: var(--secondary-color);
+  color: #d5dce7;
 }
 
 
@@ -293,10 +294,10 @@ strong {
   CUSTOM BUTTON               
 -----------------------------------------*/
 .custom-btn {
-  background: var(--custom-btn-bg-color);
+  background: #d5dce7;
   border: 2px solid transparent;
   border-radius: var(--border-radius-large);
-  color: var(--white-color);
+  color: #1d5b50;
   font-size: var(--btn-font-size);
   font-weight: var(--font-weight-bold);
   line-height: normal;
@@ -305,7 +306,7 @@ strong {
 }
 
 .custom-btn:hover {
-  background: var(--custom-btn-bg-hover-color);
+  background: #1d5b50;
   color: var(--white-color);
 }
 
@@ -363,7 +364,6 @@ strong {
   top: 0;
   right: 0;
   left: 0;
-  margin-top: 51px;
 }
 
 .sticky-wrapper.is-sticky .navbar {
@@ -371,7 +371,7 @@ strong {
 }
 
 .navbar {
-  background: transparent;
+  background: none;
   z-index: 9;
 }
 
@@ -400,7 +400,7 @@ strong {
 
 .navbar-nav .nav-link.active, 
 .navbar-nav .nav-link:hover {
-  color: var(--secondary-color);
+  color: #d5dce7;
 }
 
 .navbar-toggler {
@@ -477,7 +477,7 @@ strong {
   position: relative;
   overflow: hidden;
   padding-top: 100px;
-  height: calc(100vh - 51px);
+  height: 100vh;
 }
 
 .hero-section small {
@@ -506,11 +506,11 @@ strong {
   ABOUT              
 -----------------------------------------*/
 .about-section {
-  background-image: url('../images/edward-unsplash-blur.jpg');
-  background-color: #704010;
+  background-color: #1d5b50;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  height: 100vh;
 }
 
 .about-image {
@@ -604,8 +604,7 @@ strong {
 }
 
 .artists-hover {
-  background-color: var(--primary-color);
-  background-color: rgba(248, 203, 46, 0.75);
+  background-color: rgba(29, 91, 80, 0.5);;
   border-radius: var(--border-radius-medium);
   backdrop-filter: blur(5px) saturate(180%);
   -webkit-backdrop-filter: blur(5px) saturate(180%);
@@ -627,12 +626,12 @@ strong {
   margin-right: 20px;
 }
 
-.artists-hover p a {
-  color: var(--secondary-color);
+.artists-hover p{
+  color: black;
 }
 
 .artists-hover p a:hover {
-  color: var(--white-color);
+  color: black;
 }
 
 .artists-hover hr {
@@ -644,8 +643,7 @@ strong {
   SCHEDULE              
 -----------------------------------------*/
 .schedule-section {
-  background-image: url('../images/nainoa-shizuru-unsplash-blur.jpg');
-  background-color: #242424;
+  background-color: #d6dde6;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -665,7 +663,7 @@ strong {
 }
 
 .schedule-table thead th {
-  background-color: var(--secondary-color);
+  background-color: #d5dce7;
 }
 
 .schedule-table th,
@@ -749,7 +747,7 @@ strong {
 }
 
 .pricing-tag {
-  background-color: var(--secondary-color);
+  background-color: #d5dce7;
   border-radius: var(--border-radius-large);
   color: var(--white-color);
   font-weight: var(--font-weight-bold);
@@ -828,8 +826,7 @@ strong {
 }
 
 .site-footer-top {
-  background-color: var(--secondary-color);
-  background-image: url('../images/nainoa-shizuru-NcdG9mK3PBY-unsplash.jpg');
+  background-color: #d6dde6;
   background-repeat: no-repeat;
   margin-bottom: 70px;
   padding-top: 30px;
@@ -880,7 +877,7 @@ strong {
 }
 
 .social-icon-link {
-  background: var(--secondary-color);
+  background: #1d5b50;
   border-radius: var(--border-radius-large);
   color: var(--white-color);
   font-size: var(--copyright-font-size);
@@ -895,7 +892,7 @@ strong {
 
 .social-icon-link:hover {
   background: var(--primary-color);
-  color: var(--white-color);
+  color: var(--green-color);
 }
 
 .social-icon-link span {
