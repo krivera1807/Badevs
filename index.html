@@ -133,81 +133,90 @@
         <section class="artists-section section-padding" id="section_3">
             <div class="container">
                 <div class="row justify-content-center">
-
                     <div class="col-12 text-center">
-                        <h2 class="mb-4">Servicios</h1>
+                        <h2>Servicios</h2>
                     </div>
-
-                    <div class="col-lg-5 col-12">
-                        <div class="artists-thumb">
-                            <div class="artists-image-wrap">
-                                <img src="images/artists/desarrollo web.png"
-                                    class="artists-image img-fluid">
+        
+                    <!-- Contenedor principal con flechas -->
+                    <div class="col-12 position-relative" style="width: 80%!important;">
+                        <!-- Flecha izquierda -->
+                        <div class="scroll-arrow left-arrow">
+                            &#10094; <!-- Símbolo de flecha izquierda -->
+                        </div>
+        
+                        <!-- Contenedor para el scroll horizontal -->
+                        <div class="artists-scroll">
+                            <div class="artists-thumb">
+                                <div class="artists-image-wrap">
+                                    <img src="images/artists/desarrollo web.png" class="artists-image img-fluid">
+                                </div>
+                                <div class="artists-hover">
+                                    <p>
+                                        Descripción breve del servicio
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                    </p>
+                                </div>
                             </div>
-
-                            <div class="artists-hover">
-                                <p>
-                                    descripción breve del servicio
-                                    <br>
-                                    <br>
-                                    <br>
-                                    <br>
-                                </p>
+        
+                            <div class="artists-thumb">
+                                <div class="artists-image-wrap">
+                                    <img src="images/artists/comunnity manager.png" class="artists-image img-fluid">
+                                </div>
+                                <div class="artists-hover">
+                                    <p>
+                                        Descripción breve del servicio
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                    </p>
+                                </div>
+                            </div>
+        
+                            <div class="artists-thumb">
+                                <div class="artists-image-wrap">
+                                    <img src="images/artists/Marketing digital.png" class="artists-image img-fluid">
+                                </div>
+                                <div class="artists-hover">
+                                    <p>
+                                        Descripción breve del servicio
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                    </p>
+                                </div>
+                            </div>
+        
+                            <div class="artists-thumb">
+                                <div class="artists-image-wrap">
+                                    <img src="images/artists/análisis de datos.png" class="artists-image img-fluid">
+                                </div>
+                                <div class="artists-hover">
+                                    <p>
+                                        Descripción breve del servicio
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        <div class="artists-thumb">
-                            <div class="artists-image-wrap">
-                                <img src="images/artists/comunnity manager.png"
-                                    class="artists-image img-fluid">
-                            </div>
-
-                            <div class="artists-hover">
-                                <p>
-                                    descripción breve del servicio
-                                    <br>
-                                    <br>
-                                    <br>
-                                    <br>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-5 col-12">
-                        <div class="artists-thumb">
-                            <div class="artists-image-wrap">
-                                <img src="images/artists/Marketing digital.png"
-                                    class="artists-image img-fluid">
-                            </div>
-
-                            <div class="artists-hover">
-                                <p>
-                                    descripción breve del servicio
-                                    <br>
-                                    <br>
-                                    <br>
-                                    <br>
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="artists-thumb">
-                            <img src="images/artists/análisis de datos.png"
-                                class="artists-image img-fluid">
-                            <div class="artists-hover">
-                                <p>
-                                    descripción breve del servicio
-                                    <br>
-                                    <br>
-                                    <br>
-                                    <br>
-                                </p>
-                            </div>
+        
+                        <!-- Flecha derecha -->
+                        <div class="scroll-arrow right-arrow">
+                            &#10095; <!-- Símbolo de flecha derecha -->
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        
+        
 
         <section class="schedule-section section-padding" id="section_4">
             <div class="container">
@@ -301,6 +310,29 @@ T e m p l a t e M o
     <script src="js/click-scroll.js"></script>
     <script src="js/custom.js"></script>
 
+    <!-- SCROLL SERVICIOS -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const scrollContainer = document.querySelector('.artists-scroll');
+            const leftArrow = document.querySelector('.left-arrow');
+            const rightArrow = document.querySelector('.right-arrow');  
+            // Desplazar a la izquierda
+            leftArrow.addEventListener('click', function() {
+                scrollContainer.scrollBy({
+                    left: -scrollContainer.offsetWidth,
+                    behavior: 'smooth'
+                });
+            }); 
+            // Desplazar a la derecha
+            rightArrow.addEventListener('click', function() {
+                scrollContainer.scrollBy({
+                    left: scrollContainer.offsetWidth,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

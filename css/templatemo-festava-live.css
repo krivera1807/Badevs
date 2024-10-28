@@ -644,6 +644,52 @@ strong {
 .artists-hover hr {
   margin: 1.5rem 0;
 }
+/* Contenedor para el scroll horizontal */
+.artists-scroll {
+  display: flex;
+  overflow-x: scroll;      /* Scroll horizontal */
+  gap: 20px;               /* Espacio entre los elementos */
+  padding-bottom: 10px;
+  scroll-behavior: smooth; /* Desplazamiento suave */
+  max-width: 100%;         /* Ocupa todo el ancho disponible */
+}
+
+/* Ocultar barras de scroll en algunos navegadores */
+.artists-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Estilos generales para los contenedores */
+.artists-thumb {
+  min-width: calc(50% - 10px); /* Ocupa la mitad del contenedor (2 elementos por vista) */
+  flex: 0 0 calc(50% - 10px);   /* Asegura que cada tarjeta mantenga su tamaño */
+}
+
+.artists-image-wrap {
+  width: 100%;
+  height: auto;
+}
+
+/* Flechas para indicar scroll */
+.scroll-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 5px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
 
 
 /*---------------------------------------
