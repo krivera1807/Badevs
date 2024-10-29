@@ -593,6 +593,7 @@ strong {
 /*---------------------------------------
   ARTISTS              
 -----------------------------------------*/
+
 .artists-thumb {
   position: relative;
   overflow: hidden;
@@ -611,7 +612,7 @@ strong {
 }
 
 .artists-hover {
-  background-color: rgba(29, 91, 80, 0.5);;
+  background-color:rgb(29, 91, 80); /*rgba(29, 91, 80, 0.5); */
   border-radius: var(--border-radius-medium);
   backdrop-filter: blur(5px) saturate(180%);
   -webkit-backdrop-filter: blur(5px) saturate(180%);
@@ -623,7 +624,8 @@ strong {
   bottom: 0;
   right: 0;
   left: 0;
-  opacity: 0;
+  opacity: 1;
+
 }
 
 .artists-hover p strong {
@@ -634,7 +636,8 @@ strong {
 }
 
 .artists-hover p{
-  color: black;
+  color: #ffffff;
+
 }
 
 .artists-hover p a:hover {
@@ -956,6 +959,27 @@ strong {
   animation: spinAround 2s linear infinite;
 }
 
+
+
+ /* Estilo para el botón flotante */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #000000;  /* #25D366; */
+  color: #25D366;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 1000;
+}
+.whatsapp-float i {
+  line-height: 60px; 
+}
+
 @keyframes spinAround {
   from {
     transform: rotate(0deg)
@@ -1068,5 +1092,6 @@ strong {
   h5 {
     font-size: 20px;
   }
+
 }
 
