@@ -1,0 +1,133 @@
+/* === removing default button style ===*/
+body {
+    background: #45627e;
+}
+
+.logo2 {
+    display: flex;
+    visibility: hidden; /* Keeps the element in the layout, but hides it visually */
+    opacity: 0; /* Make it invisible initially */
+    align-items: center;
+    cursor: pointer;
+    width: fit-content;
+    transition: opacity 1s ease, visibility 0s 1s; /* opacity transition + delay visibility */
+    transform: scale(1.2);
+  }
+  
+  /* When the .show class is added, the logo fades in */
+  .logo2.show {
+    visibility: visible; /* Make it visible */
+    opacity: 1; /* Fade in */
+    transition: opacity 1s ease, visibility 0s 0s; /* smooth opacity change, no delay for visibility */
+  }
+
+.logo {
+    z-index: 8;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: fit-content;
+    transform: scale(4.5);
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    opacity: 1; /* Start fully visible */
+    transition: opacity 0.3s ease;
+}
+
+.logo svg, .logo2 svg {
+    margin-right: .5em;
+    margin-top: .9em;
+}
+
+.button {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+
+/* button styling */
+.button {
+    --border-right: 3px;
+    --animation-color: #fff;
+    --fs-size: 3em;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Signika Negative";
+    font-weight: 600;
+    position: relative;
+    color: white;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+
+/* this is the text, when you hover on button */
+.hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 1s;
+    height: 80px;
+}
+
+.logo svg path, .logo2 svg path {
+    transition: 1s;
+}
+
+/* hover */
+.logo:hover .hover-text, .logo2:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 1.5px var(--animation-color))
+}
+
+.logo:hover svg path:nth-child(2), .logo2:hover svg path:nth-child(2) {
+    filter: drop-shadow(0 0 1px #fff);
+}
+
+.logo:hover svg path:nth-child(n+3):nth-child(-n+5), .logo2:hover svg path:nth-child(n+3):nth-child(-n+5) {
+    filter: drop-shadow(0 0 2px #2dec9b);
+}
+
+.logo:hover .lema, .logo2:hover .lema {
+    filter: drop-shadow(0 0 1.5px #2dec9b);
+}
+
+/* Create a class to simulate the hover effect */
+.logo.hover .hover-text, .logo2.hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 1.5px var(--animation-color));
+}
+
+.logo.hover svg path:nth-child(2), .logo2.hover svg path:nth-child(2) {
+    filter: drop-shadow(0 0 1px #fff);
+}
+
+.logo.hover svg path:nth-child(n+3):nth-child(-n+5), .logo2.hover svg path:nth-child(n+3):nth-child(-n+5) {
+    filter: drop-shadow(0 0 2px #2dec9b);
+}
+
+.logo.hover .lema, .logo2.hover .lema {
+    filter: drop-shadow(0 0 1.5px #2dec9b);
+}
+
+.lema {
+    font-family: "Signika Negative";
+    font-weight: 500;
+    font-size: 10.5px;
+    position: absolute;
+    top: 52px;
+    left: -20px;
+    text-transform: uppercase;
+    width: 200px;
+    background: -webkit-linear-gradient(left, #2dec9b 0%, #2eadf8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 1s;
+}
