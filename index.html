@@ -250,10 +250,12 @@
                                 <div class="artists-hover">
                                     <p>
                                         <!--Community Manager-->
-                                        Potenciamos tu presencia digital en redes sociales, creando <b>contenido atractivo</b> que fomente el engagement y comunidades leales. 
+                                        Potenciamos tu presencia digital en redes sociales, creando <b>contenido
+                                            atractivo</b> que fomente el engagement y comunidades leales.
                                         <br>
-                                        <b>Servicio integral</b> de planificación de estrategias, creación de publicaciones, análisis de métricas,  y gestión de interacciones.
-                                        <br/>
+                                        <b>Servicio integral</b> de planificación de estrategias, creación de
+                                        publicaciones, análisis de métricas, y gestión de interacciones.
+                                        <br />
                                     </p>
                                 </div>
                             </div>
@@ -266,18 +268,12 @@
                                     <p>
                                         <!--Marketing digital-->
                                         <br>
-                                        Ofrecemos soluciones estratégicas para impulsar tu negocio en el entorno online.
-                                        Nuestro enfoque abarca desde la creación de campañas publicitarias efectivas en
-                                        redes sociales y Google Ads, hasta la optimización de SEO y la
-                                        gestión de contenido. Trabajo para aumentar la visibilidad de tu marca, generar
-                                        leads de calidad y mejorar la conversión de visitantes en clientes.
-                                        Analizamos constantemente las métricas para adaptar y optimizar las estrategias,
-                                        asegurando un retorno de inversión sólido.
-                                        Juntos, podemos llevar tu presencia digital al siguiente nivel y alcanzar tus
-                                        objetivos comerciales.
+                                        Aplicación de <b>estrategias publicitarias</b> en redes sociales y Google Ads.
+                                        <br><br>
+                                        Nuestro objetivo es aumentar la <b>visibilidad de tu marca</b>, generar leads de
+                                        calidad y mejorar la conversión.
                                         <br />
                                     </p>
-
                                 </div>
                             </div>
 
@@ -289,17 +285,11 @@
                                     <p>
                                         <!--Análisis de datos-->
                                         <br>
-                                        En el mundo actual, los datos son clave para la toma de decisiones informadas.
-                                        Como expertos en Análisis de Datos,
-                                        ofrecemos servicios de recolección, procesamiento y visualización de datos
-                                        utilizando Power BI. Nuestro enfoque se centra en
-                                        transformar datos complejos en información clara y actionable que impulse el
-                                        crecimiento y la eficiencia de tu negocio.
-                                        Realizamos análisis profundos para identificar tendencias, patrones y
-                                        oportunidades, ayudando a las empresas a optimizar sus
-                                        operaciones y maximizar su rentabilidad. Desde la creación de dashboards
-                                        interactivos hasta informes detallados,
-                                        te ayudamos a convertir tus datos en una poderosa herramienta de negocio.
+                                        Análisis de <b>datos dinámico</b>, transformamos información compleja en
+                                        insights claros y accionables.
+                                        <br>
+                                        Datos actualizados, interactivos y detallados, para identificar tendencias y
+                                        <b>maximizar la rentabilidad</b> de tu negocio.
                                         <br />
                                     </p>
                                 </div>
@@ -428,24 +418,40 @@ T e m p l a t e M o
     <!-- SCROLL SERVICIOS -->
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const scrollContainer = document.querySelector('.artists-scroll');
-            const leftArrow = document.querySelector('.left-arrow');
-            const rightArrow = document.querySelector('.right-arrow');
+        document.addEventListener("DOMContentLoaded", function () {
+            const scrollContainer = document.querySelector(".artists-scroll");
+            const leftArrow = document.querySelector(".left-arrow");
+            const rightArrow = document.querySelector(".right-arrow");
+
+            function updateArrows() {
+                const scrollLeft = scrollContainer.scrollLeft;
+                const maxScrollLeft = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+
+                leftArrow.style.display = scrollLeft <= 0 ? "none" : "block";
+                rightArrow.style.display = scrollLeft >= maxScrollLeft ? "none" : "block";
+            }
+
             // Desplazar a la izquierda
-            leftArrow.addEventListener('click', function () {
+            leftArrow.addEventListener("click", function () {
                 scrollContainer.scrollBy({
                     left: -scrollContainer.offsetWidth,
-                    behavior: 'smooth'
+                    behavior: "smooth"
                 });
             });
+
             // Desplazar a la derecha
-            rightArrow.addEventListener('click', function () {
+            rightArrow.addEventListener("click", function () {
                 scrollContainer.scrollBy({
                     left: scrollContainer.offsetWidth,
-                    behavior: 'smooth'
+                    behavior: "smooth"
                 });
             });
+
+            // Detectar cuando el usuario haya terminado de hacer scroll
+            scrollContainer.addEventListener("scroll", updateArrows);
+
+            // Ocultar flecha izquierda al inicio
+            updateArrows();
         });
     </script>
 </body>

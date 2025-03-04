@@ -632,8 +632,8 @@ strong {
   right: 0;
   left: 0;
   opacity: 1;
-
 }
+
 
 .artists-hover p strong {
   color: var(--white-color);
@@ -658,7 +658,8 @@ strong {
 .artists-scroll {
   display: flex;
   overflow-x: scroll;      /* Scroll horizontal */
-  gap: 20px;               /* Espacio entre los elementos */
+  overflow-y: visible;
+  gap: 10px;               /* Espacio entre los elementos */
   padding-bottom: 10px;
   scroll-behavior: smooth; /* Desplazamiento suave */
   max-width: 100%;         /* Ocupa todo el ancho disponible */
@@ -686,8 +687,8 @@ strong {
   top: 50%;
   transform: translateY(-50%);
   font-size: 2rem;
-  color: #333;
-  background-color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.7);
+
   padding: 5px;
   cursor: pointer;
   z-index: 10;
@@ -695,10 +696,12 @@ strong {
 
 .left-arrow {
   left: 10px;
+  margin-left: -10%
 }
 
 .right-arrow {
   right: 10px;
+  margin-right: -10%;
 }
 
 
